@@ -2,75 +2,62 @@
   box-sizing: border-box;
 }
 main {
-  display: grid;
-  grid-template-columns: 0.5fr 2fr 0.5fr;
-  row-gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
   font-family: sans-serif;
 }
-h2 {
-  color: #3e8600;
-  text-align: center;
-}
-p {
-  text-align: center;
-  font-size: 1.1rem;
-}
-#nav-bar {
-  position: fixed;
-  background-color: #70a30293;
-  width: 100%;
-  height: 40px;
-  margin: -8px;
+
+#header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  overflow: hidden;
+  background-color: #70a30293;
+  padding: 0 30px 0 40px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.right-links,
+.left-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   white-space: nowrap;
+  margin: 0 1rem 0 1rem;
 }
 .nav-link {
   color: white;
   text-decoration: none;
-  padding: 0 20px 0 20px;
 }
-#header {
-  grid-column: 1 / -1;
+.title {
+  color: white;
+  font-weight: bold;
 }
 #header-img {
-  margin: 6% 10% 5% 40%;
-}
-
-.header-link {
-  display: flex;
-  position: sticky;
-  right: 75%;
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-  font-family: verdana;
-  align-items: center;
-  gap: 0.2rem;
-}
-#title {
-  font-family: "Corinthia", helvetica;
-  color: #3e8600;
-  font-size: 5rem;
-  text-align: center;
-  margin: 70px auto -20px auto;
+  width: 15rem;
+  margin: 5rem auto 5rem auto;
 }
 #about-us {
-  display: grid;
-  grid-column: 2 / 3;
-  grid-template-columns: repeat(2, 1fr);
-
+  display: flex;
   align-items: center;
-  column-gap: 2rem;
-  margin-top: -40px;
+  justify-content: center;
+  gap: 2rem;
+  width: 42rem;
+  text-align: center;
+  margin-bottom: 5rem;
 }
 #benefits {
-  grid-column: 2 / 3;
   display: flex;
-  column-gap: 2rem;
-  margin: 60px 0 60px 0;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+  width: 42rem;
 }
 .well-being,
 .mental,
@@ -79,35 +66,46 @@ p {
   border-left: 8px solid #3e8600;
   border-top: 2px solid black;
   border-bottom: 2px solid black;
-  padding: 20px 10px 20px 10px;
+  padding: 0.5rem;
   text-align: center;
   border-radius: 5px;
   box-shadow: 2px 2px 4px #3e860096;
+  width: 10rem;
+  flex: 1;
 }
-
 #meditate {
-  grid-column: 2 / 3;
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 5rem;
+  text-align: center;
+  width: 41rem;
 }
-#meditate p {
-  width: 660px;
-  margin-top: -10px;
-}
-
 #user-data {
   display: flex;
-  grid-column: 2 / 3;
-
+  justify-content: space-between;
+  gap: 2rem;
   align-items: center;
-  column-gap: 2rem;
-  margin: 5rem auto 5rem auto;
+  margin-bottom: 5rem;
+  width: 42rem;
 }
-#form {
+.img {
+  width: 16rem;
+}
+.footer {
   text-align: center;
-  white-space: nowrap;
+  background-color: #70a30293;
+  width: 100vw;
+  height: 10vh;
+  margin: -1rem;
+}
+a:hover {
+  color: #3e8600;
+  font-style: italic;
+}
+.community {
+  text-align: center;
 }
 #submit {
   background-color: #70a302a8;
@@ -115,14 +113,4 @@ p {
   border: 2px solid #70a302a8;
   height: 1.5rem;
   width: 6rem;
-}
-#email {
-  height: 1.5rem;
-  width: 60%;
-  min-width: 200px;
-}
-
-a:hover {
-  color: #3e8600;
-  font-style: italic;
 }
